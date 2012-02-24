@@ -10,8 +10,4 @@ metapackages, i.e.:
 
 Just type:
 
-~~~
-
-make
-
-~~~
+    make

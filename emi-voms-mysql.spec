@@ -16,6 +16,7 @@ Requires: fetch-crl
 Requires: voms-server
 Requires: voms-mysql-plugin
 Requires: bdii
+Requires: mysql-server
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 

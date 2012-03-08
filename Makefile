@@ -18,5 +18,5 @@ rpm:
 
 etics: 	clean rpm
 		mkdir -p tgz RPMS
-		cp target/*.tar.gz tgz
+		cp $(rpmbuild_dir)/SOURCES/voms-mp.tar.gz tgz
 		cp -r $(rpmbuild_dir)/RPMS/* $(rpmbuild_dir)/SRPMS/* RPMS

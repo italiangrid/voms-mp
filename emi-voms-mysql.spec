@@ -1,14 +1,12 @@
 Name: emi-voms-mysql
-Version: 1.0.1
+Version: 1.1.0
 Release: 1%{?dist}
 Summary: Virtual Organization Mebership Service (MySQL metapackage)
 
 Group:          System Environment/Libraries
 License:        ASL 2.0
-URL: https://twiki.cnaf.infn.it/twiki/bin/view/VOMS
+URL: http://italiangrid.github.com/voms
 
-Requires: yaim-voms
-Requires: glite-yaim-bdii
 Requires: voms-admin-server
 Requires: voms-admin-client
 Requires: glite-info-provider-service
@@ -19,6 +17,7 @@ Requires: bdii
 Requires: mysql-server
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+BuildArch: noarch
 
 Packager: Andrea Ceccanti <andrea.ceccanti@cnaf.infn.it>
 Source : voms-mp.tar.gz
@@ -50,6 +49,8 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Jan 18 2013 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 1.1.0-1
+- EMI 3 metapackage drops dependency on YAIM
 
 * Thu Dec 15 2011 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 1.0.2-1
 - First packaging.

@@ -1,6 +1,6 @@
 Name: emi-voms-oracle
 Version: 1.1.0
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Virtual Organization Mebership Service (Oracle backend)
 
 Group:          System Environment/Libraries
@@ -14,6 +14,7 @@ Requires: fetch-crl
 Requires: voms-server
 Requires: voms-oracle-plugin
 Requires: bdii
+Requires: emi-version
 
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch: noarch
@@ -48,6 +49,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Feb 19 2013 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 1.1.0-2
+- Readded lost dependency on emi-version
+
 * Fri Jan 18 2013 Andrea Ceccanti <andrea.ceccanti at cnaf.infn.it> - 1.1.0-1
 - EMI 3 metapackage drops dependency on YAIM
 
